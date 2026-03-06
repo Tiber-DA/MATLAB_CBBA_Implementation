@@ -4,7 +4,7 @@ A simple MATLAB implementation of the Consensus-Based Bundle Algorithm (CBBA).
 
 This repository was created to understand how the CBBA algorithm works in practice by implementing the core components of the algorithm, including bundle construction, message passing and conflict resolution.
 
-##Files
+## Files
 
 - main.m – entry point that creates tasks and agents and runs the algorithm
 - runCBBA.m – main loop that runs bundle building, communication, and consensus\
