@@ -14,8 +14,7 @@ end
 for j = 1:length(agent.y)
 
     y_ij = agent.y(j);
-    z_ij = agent.z(j);
-
+    z_ij = agent.z(j); 
     y_kj = y_k(j);
     z_kj = z_k(j);
 
