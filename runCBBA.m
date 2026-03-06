@@ -9,7 +9,7 @@ for i = 1:numAgents
     agents(i) = agentInit(allAgentIDs(i), maxTasks, numAgents, allAgentIDs, numTasks);
 end
 
-while all([agents.changed])
+while any([agents.changed])
 
     for i = 1:numAgents
         agents(i).changed = false;

@@ -78,9 +78,9 @@ while length(bundle) < agent.maxTasks
     [maxGain, bestIdx] = max(bestGain);
 
     % If no valid task remains, stop building bundle
-    % if maxGain == -inf
-    %     break;
-    % end
+    if isinf(maxGain) && maxGain < 0   % covers -inf
+        break;
+    end
 
     chosenTaskID = taskList(bestIdx).id;
     insertPos    = bestPos(bestIdx);
