@@ -15,6 +15,13 @@ This repository was created to understand how the CBBA algorithm works in practi
 - receiveMessages.m – receives messages from other agents
 - score.m – scoring function used to evaluate tasks
 - createTasks.m – generates random tasks
+  
+## Running
+Run the main script in MATLAB:
+
+- main.m
+
+This will create a set of agents and tasks and execute the CBBA algorithm until convergence.
 
 ## References 
 
