@@ -1,9 +1,10 @@
-function agents = runCBBA(allAgentIDs, taskList, maxTasks)
+function [agents, t, commsEvents] = runCBBA(allAgentIDs, taskList, maxTasks)
 numTasks = length(taskList);
 numAgents = length(allAgentIDs);
 agents(1, numAgents) = agentInit(allAgentIDs(1), maxTasks, numAgents, allAgentIDs, numTasks);
 
 t = 0;
+commsEvents = 0;
 
 for i = 1:numAgents
     agents(i) = agentInit(allAgentIDs(i), maxTasks, numAgents, allAgentIDs, numTasks);
@@ -29,6 +30,7 @@ while any([agents.changed])
     % ---- Phase 3: Receive ---- %
     for i = 1:numAgents
         agents(i) = receiveMessages(agents(i), messagePool);
+        commsEvents = commsEvents + (numAgents - 1);
     end
 
     % ---- Phase 4: Resolve Conflicts ---- %
@@ -46,38 +48,6 @@ while any([agents.changed])
     end
     t = t + 1;
 end
-
-% ------------- RESULTS ------------ %
-
-fprintf('\n========== FINAL RESULTS ==========\n');
-
-fprintf('\nPer-agent bundles:\n');
-for a = 1:numAgents
-    fprintf('Agent %d: ', agents(a).id);
-    if isempty(agents(a).bundle)
-        fprintf('(none)\n');
-    else
-        fprintf('%s\n', mat2str(agents(a).bundle));
-    end
-end
-
-finalZ = agents(1).z;
-finalY = agents(1).y;
-
-fprintf('\nFinal task -> agent assignment:\n');
-for j = 1:numTasks
-    if finalZ(j) == -1
-        fprintf('Task %d: (unassigned)\n', j);
-    else
-        fprintf('Task %d: Agent %d (bid = %.3f)\n', ...
-            j, finalZ(j), finalY(j));
-    end
-end
-
-fprintf('\nFinal timestamps (s) from Agent %d:\n', agents(1).id);
-fprintf('s: %s\n', mat2str(agents(1).s));
-
-disp("Converged on Iteration: " + t);
 
 end
 
