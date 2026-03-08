@@ -50,6 +50,6 @@ agent.msgBuffer = struct('from', {}, 'y', {}, 'z', {}, 's', {});
 agent.changed = true;
 
 % ---------------- Initial Position ----------------
-agent.startPos = rand(1,3) * 100;
+agent.startPos = rand(1,2) * 100;
 
 end
