@@ -1,6 +1,6 @@
 ## MATLAB CBBA Implementation
 
-A simple MATLAB implementation of the Consensus-Based Bundle Algorithm (CBBA) [1].
+A simple MATLAB implementation of the Consensus-Based Bundle Algorithm (CBBA) [[1]].
 
 This repository was created to understand how the CBBA algorithm works in practice by implementing the core components of the algorithm, including bundle construction, message passing and conflict resolution.
 
