@@ -1,6 +1,6 @@
 ## MATLAB CBBA Implementation
 
-A simple MATLAB implementation of the Consensus-Based Bundle Algorithm (CBBA).
+A simple MATLAB implementation of the Consensus-Based Bundle Algorithm (CBBA) [1].
 
 This repository was created to understand how the CBBA algorithm works in practice by implementing the core components of the algorithm, including bundle construction, message passing and conflict resolution.
 
@@ -29,4 +29,4 @@ Edit initialisation variables to change the number of tasks, agents and max task
 
 ## References 
 
-H.-L. Choi, L. Brunet, and J. P. How, “Consensus-based decentralized auctions for robust task allocation,” IEEE Trans. Robot., vol. 25, no. 4, pp. 912–926, Aug. 2009.
+[1] H.-L. Choi, L. Brunet, and J. P. How, “Consensus-based decentralized auctions for robust task allocation,” IEEE Trans. Robot., vol. 25, no. 4, pp. 912–926, Aug. 2009.
