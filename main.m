@@ -1,9 +1,13 @@
 clearvars
 
-% Initialise tasks and agent parameters
-tasks = createTasks(15);
-agentIDs = 1:5;
+% Edit these values to change initialisation
+numTasks = 15;
+numAgents = 5;
 maxTasks = 3;
+
+% Initialise tasks and agent parameters
+tasks = createTasks(numTasks);
+agentIDs = 1:numAgents;
 
 % Run CBBA
 [agents, iterations, commsEvents] = runCBBA(agentIDs, tasks, maxTasks);
