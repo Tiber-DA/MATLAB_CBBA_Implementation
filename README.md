@@ -15,6 +15,9 @@ This repository was created to understand how the CBBA algorithm works in practi
 - receiveMessages.m – receives messages from other agents
 - score.m – scoring function used to evaluate tasks
 - createTasks.m – generates random tasks
+- plotResults - plots the paths of each agent
+- displayResults - prints the final task allocations
+- validateAssignments - checks for per-agent an cross-agent duplicate task allocations
   
 ## Running
 Run the main script in MATLAB:
