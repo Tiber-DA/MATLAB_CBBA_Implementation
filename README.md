@@ -8,7 +8,7 @@ This repository was created to understand how the CBBA algorithm works in practi
 
 - main.m – entry point that creates tasks and agents and runs the algorithm
 - runCBBA.m – main loop that runs bundle building, communication, and consensus
-- agentInit.m – initializes agent state
+- agentInit.m – initialises agent state
 - buildBundle.m – bundle construction phase
 - resolveConflicts.m – conflict resolution between agents
 - sendMessage.m – creates broadcast messages
